@@ -38,6 +38,7 @@ $(document).ready(function() {
 // });
 
 $(function() {
+
     $('input[name="daterange"]').daterangepicker({
         opens: 'center'
     }, function(start, end, label) {
