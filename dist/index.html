@@ -196,7 +196,7 @@
                                             </div>
                                             <div class="col-xl-2">
                                                 <select id="Store" name="Store">
-                                                    <option value="Select">Select Store</option>
+                                                    <option value="Select">All Stores</option>
                                                     <option value="Store1">Store 1</option>
                                                     <option value="store2">Store 2</option>
                                                     <option value="store3">Store 3</option>
@@ -206,9 +206,10 @@
                                                 <div>Select Date</div>
                                             </div>
                                             <div class="col-xl-3">
-                                                <div id="reportrange" style="background: #fff; cursor: pointer;  border: 1px solid #ccc; width: 100%">
-                                                    <span></span> &nbsp;
-                                                </div>
+                                                <!-- <div id="reportrange" style="background: #fff; cursor: pointer;  border: 1px solid #ccc; width: 100%"> -->
+                                                <input type="text" name="daterange" value="" />
+                                                <!-- <span></span> &nbsp;
+                                            </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -310,37 +311,69 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1 " style="text-align: center;font-weight: bold; color: #0019fe;">
                                         Sales
-                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="50"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         Local Sales
-                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction1()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown1" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div id="donutchart" style="width: 500px; height: 260px;"></div>
+                                    <div class="card-body"><canvas id="myPieChart" width="100%" height="50"></canvas></div>
+                                    <!-- <div id="donutchart" style="width: 500px; height: 260px;"></div> -->
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         Sales By Day
-                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction2()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown2" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         Sales By Hour
-                                        <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction3()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown3" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart2" width="100%" height="50"></canvas></div>
                                 </div>
@@ -349,10 +382,18 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Menu Items
-                                        <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction4()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown4" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -426,10 +467,18 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Employees
-                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction5()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown5" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -487,10 +536,18 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Stores
-                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction6()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown6" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -523,9 +580,17 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold; color: #0019fe;">
                                         Promo Performance
-                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
+                                        <!-- <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button> -->
+                                        <div class="dropdown1">
+                                            <button onclick="myFunction7()" class="btn"><i class="fas fa-ellipsis-v "></i></button>
+                                            <div id="myDropdown7" class="dropdown1-content">
+                                                <a href="#">Save as Excel</a>
+                                                <a href="#">Save as Pdf</a>
+                                                <a href="#">Print</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -576,6 +641,13 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script src="assets/demo/doughnut_chart.js"></script>
+
+
+            <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+            <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+            <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+            <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+            <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
             <!--  -->
 
