@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>demo</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/daterangepicker.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -18,6 +19,9 @@
         <a class="navbar-brand" href="index.html"><img src="assets\img\app Icon.png" alt="Italian Trulli" style="width:50px;height:60px;"></a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i
                 class="fas fa-bars"></i></button>
+        <div> </div> &nbsp;
+        <div class="breadcrumb-item ">Store</div>
+
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         </form>
         <!-- Navbar-->
@@ -167,6 +171,11 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             Logout
                         </a>
+
+                        <div class="sb-sidenav-footer">
+                            <div class="small"> &nbsp; &nbsp;&nbsp;Version : 1.0.02</div>
+
+                        </div>
             </nav>
             </div>
             <!-- dashboard -->
@@ -177,26 +186,30 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="card mb-4">
-                                    <div class="card-header">
+                                    <div class="card-header1">
                                         <div class="row">
-                                            <div class="col-xl-1"></div>
+                                            &nbsp;&nbsp;
+                                            <button type="button " class="btn btn-primary float-left "><i class="fas fa-sync-alt "></i></button>
+                                            <!-- <div class="fas fa-sync-alt"> </div> -->
                                             <div class="col-xl-2">
-                                                <select id="cars" name="cars">
-                                                    <option value="volvo">Select Store</option>
-                                                    <option value="saab">Store 1</option>
-                                                    <option value="fiat">Store 2</option>
-                                                    <option value="audi">Store 3</option>
+                                                <div>Select Store</div>
+                                            </div>
+                                            <div class="col-xl-2">
+                                                <select id="Store" name="Store">
+                                                    <option value="Select">Select Store</option>
+                                                    <option value="Store1">Store 1</option>
+                                                    <option value="store2">Store 2</option>
+                                                    <option value="store3">Store 3</option>
                                                   </select>
                                             </div>
                                             <div class="col-xl-2">
-                                                <!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-                                                    <input placeholder="Select date" type="text" id="example" class="form-control input-prefix">
-                                                </div> -->
-                                                <div class="form-group">
-                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+                                                <div>Select Date</div>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <div id="reportrange" style="background: #fff; cursor: pointer;  border: 1px solid #ccc; width: 100%">
+                                                    <span></span> &nbsp;
                                                 </div>
                                             </div>
-                                            <div class="fas fa-sync-alt"> </div>
                                         </div>
                                     </div>
 
@@ -205,89 +218,89 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">TOTAL SALES</div>
+                                    <div class="card-body" style="font-weight: bold;">TOTAL SALES</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$ 12345.25</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body " style="text-align: center;">ORDERS</div>
+                                    <div class="card-body " style="text-align: center; font-weight: bold;">ORDERS</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">31</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">AVERAGE ORDER</div>
+                                    <div class="card-body" style="font-weight: bold;">AVERAGE ORDER</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$ 1234.25</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">MAX ORDER</div>
+                                    <div class="card-body" style="font-weight: bold;">MAX ORDER</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$ 123.45</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">STORES</div>
+                                    <div class="card-body" style="font-weight: bold;">STORES</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">1</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">ACTIVE CUSTOMERS</div>
+                                    <div class="card-body" style="font-weight: bold;">ACTIVE CUSTOMERS</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">5</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">NEW CUSTOMERS</div>
+                                    <div class="card-body" style="font-weight: bold;">NEW CUSTOMERS</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">30</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">TOTAL CUSTOMERS</div>
+                                    <div class="card-body" style="font-weight: bold;">TOTAL CUSTOMERS</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">35</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">CASH FLOW</div>
+                                    <div class="card-body" style="font-weight: bold;">CASH FLOW</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$ 123456.78</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">PAYMENTS</div>
+                                    <div class="card-body" style="font-weight: bold;">PAYMENTS</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$ 0.00</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-2 col-md-6">
                                 <div class="card bg-white text-black mb-4">
-                                    <div class="card-body">FREE CASH FLOW</div>
+                                    <div class="card-body" style="font-weight: bold;">FREE CASH FLOW</div>
                                     <div class="card-footer">
                                         <div class="medium text-black " style="text-align: center; font-weight: bold;">$123456.78</div>
                                     </div>
@@ -297,36 +310,37 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         Sales
+                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="50"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         Local Sales
+                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
-                                    <div class="card-body"><canvas id="myPieChart" width="100%" height="50"></canvas></div>
-                                    <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+
+                                    <div id="donutchart" style="width: 500px; height: 260px;"></div>
                                 </div>
                             </div>
-
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
-                                        <!-- <i class="fas fa-chart-bar mr-1"></i> -->
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         Sales By Day
+                                        <button type="button " class="btn float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
-                                        <!-- <i class="fas fa-chart-bar mr-1"></i> -->
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         Sales By Hour
+                                        <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart2" width="100%" height="50"></canvas></div>
                                 </div>
@@ -335,9 +349,10 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Menu Items
+                                        <button type="button " class="btn  float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -411,9 +426,10 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Employees
+                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -471,9 +487,10 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         <!-- <i class="fas fa-table mr-1"></i> -->
                                         Stores
+                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -506,8 +523,9 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header" style="text-align: center;font-weight: bold;">
+                                    <div class="card-header1" style="text-align: center;font-weight: bold;">
                                         Promo Performance
+                                        <button type="button " class="btn   float-right "><i class="fas fa-ellipsis-v "></i></button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -530,10 +548,7 @@
                                                         <td>Promo 2</td>
                                                         <td>5</td>
                                                         <td>$ 583.16</td>
-
                                                     </tr>
-
-
                                                 </tbody>
                                             </table>
                                         </div>
@@ -559,6 +574,26 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script src="assets/demo/doughnut_chart.js"></script>
+
+            <!--  -->
+
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+            <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+
+            <!-- <script>
+                $(function() {
+                    $('input[name="daterange"]').daterangepicker({
+                        opens: 'left'
+                    }, function(start, end, label) {
+                        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                    });
+                });
+            </script> -->
 
 </body>
 

@@ -1,19 +1,4 @@
 @charset "UTF-8";
-
-/*!
-* Start Bootstrap - SB Admin v6.0.1 (https://startbootstrap.com/templates/sb-admin)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-*/
-
-
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -4828,6 +4813,13 @@ input[type=button].btn-block {
 
 .card-header {
     padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-header1 {
+    padding: 0.25rem 1.0rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -10352,8 +10344,13 @@ body {
 }
 
 .sb-sidenav .sb-sidenav-footer {
-    padding: 0.75rem;
+    padding: 0.05rem;
     flex-shrink: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 .sb-sidenav-dark {

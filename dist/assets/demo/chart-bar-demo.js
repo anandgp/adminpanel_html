@@ -10,8 +10,8 @@ var myLineChart = new Chart(ctx, {
         labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         datasets: [{
             label: "Revenue",
-            backgroundColor: "rgba(255,193,7,1)",
-            borderColor: "rgba(255,193,7,1)",
+            backgroundColor: "rgba(7,69,255,1)",
+            borderColor: "rgba(7,69,255,1)",
             data: [9821, 4215, 5312, 13984, 6251, 7841, 3846],
         }],
     },
@@ -53,8 +53,8 @@ var myLineChart = new Chart(ctx, {
         labels: ["09.00", "10.00", "11.00", "12.00", "13.00", "14.00", "15.00", "16.00", "17.00"],
         datasets: [{
             label: "Revenue",
-            backgroundColor: "rgba(255,193,7,1)",
-            borderColor: "rgba(255,193,7,1)",
+            backgroundColor: "rgba(7,69,255,1)",
+            borderColor: "rgba(7,69,255,1)",
             data: [2193, 9846, 13912, 10304, 6251, 7841, 3846, 6731, 4380],
         }],
     },
